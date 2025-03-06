@@ -34,7 +34,7 @@ const JoinLeague = () => {
         
         if (!token || !user) {
             console.error("User is not authenticated");
-            return; // Optionally, redirect to login page
+            return;
         }
     
         // Send token with the request to join the league
