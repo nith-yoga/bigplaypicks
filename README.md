@@ -15,6 +15,14 @@ This is Big Play Picks! A simple fantasy football app built using a MERN stack. 
   Database: MongoDB  
   API: TheSportsDB  
 
+## Known Issues  
+  - On login, the dashboard doesn't load team info, but the team info displays after drafting a team. This will require further debugging.  
+  - Error handling on draft page could use more clarity. This will be further worked on to make an easier experience for users.  
+  - The draft feature is in a very beta state. This feature will be a focus to build, flesh out, and complete!  
+  - User login and registration are functional but there may be issues with managing user sessions that will require further debugging  
+  - Confirmation and error messages need to be implemented for better UX
+
+
 ## Future Improvements
   Enhanced User Management  
     - Profile customization  
