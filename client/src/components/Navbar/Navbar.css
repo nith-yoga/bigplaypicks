@@ -1,0 +1,60 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 15px 30px;
+  color: white;
+}
+
+.navbar-left {
+  margin-right: -10%;
+}
+
+.title {
+  font-family: 'Jost', sans-serif;
+  font-size: 2rem;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-family: 'Jura', sans-serif;
+  font-weight: 300;
+  color: #edebeb;
+}
+
+.navbar-center {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-link {
+  font-family: 'Jost', sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #f4a261;
+}
+
+.navbar-right .login-button {
+  text-decoration: none;
+  font-size: 1.5rem;
+  background-color: #f4a261;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.login-button:hover {
+  background-color: #e76f51;
+}

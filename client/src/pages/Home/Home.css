@@ -1,0 +1,67 @@
+.home-container {
+    text-align: center;
+    padding: 40px;
+}
+
+.hero {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-family: 'Jost', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-family: 'Jura', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.cta-button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 8px;
+}
+
+.cta-button.secondary {
+    background-color: #28a745;
+}
+
+.walkthrough {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+.step {
+    flex: 1;
+    margin: 10px;
+}
+
+.placeholder-box {
+    background-color: #ddd;
+    padding: 40px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.secondary-cta {
+    margin-top: 40px;
+}
+
+.secondary-cta p {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}

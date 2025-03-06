@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.leftSide {
+    width: 45%;
+}
+
+.rightSide {
+    width: 45%;
+}
+
+.teamInfo {
+    margin-bottom: 20px;
+}
+
+.playerStats {
+    margin-top: 20px;
+}
