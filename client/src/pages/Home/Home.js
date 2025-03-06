@@ -16,8 +16,8 @@ function Home() {
                 <section className="hero">
                     <p className="subtitle">Build your dream team and win it all!</p>
                     <div className="cta-buttons">
-                        <Link to="/Login">Sign Up</Link>
-                        <Link to="/JoinLeague">Already have an account? Join a league today!</Link>
+                        <Link to="/Register">Sign Up</Link>
+                        <Link to="/Login">Already have an account? Join a league today!</Link>
                     </div>
                 </section>
 
@@ -39,7 +39,7 @@ function Home() {
                 {/* Secondary CTA */}
                 <section className="secondary-cta">
                     <p>Ready to play?</p>
-                    <Link to="/Login" className="cta-button">Create an Account</Link>
+                    <Link to="/Register" className="cta-button">Create an Account</Link>
                 </section>
             </div>
         </div>

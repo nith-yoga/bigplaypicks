@@ -3,6 +3,14 @@
     text-align: center;
 }
 
+h1, p {
+    color: #f4f4f4;
+}
+
+h3 {
+    color: #c7c7c7;
+}
+
 .league-list {
     display: flex;
     flex-direction: column;
@@ -11,7 +19,7 @@
 }
 
 .league-item {
-    background-color: #f4f4f4;
+    background-color: #333;
     padding: 15px;
     border-radius: 8px;
 }
