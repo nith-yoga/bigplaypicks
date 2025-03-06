@@ -10,12 +10,13 @@ function CreateLeague() {
 
     const navigate = useNavigate();
 
+    // Handle League Creation
     const handleSubmit = async (e) => {
         e.preventDefault();
         setErrorMessage("");
     
         const token = localStorage.getItem("token");
-        console.log("Retrieved Token:", token); // ✅ Debugging token
+        // console.log("Retrieved Token:", token);
     
         if (!token) {
             setErrorMessage("Authentication error: No token found.");
@@ -29,8 +30,8 @@ function CreateLeague() {
                 { headers: { Authorization: `Bearer ${token}` } }
             );
     
-            console.log("Creating league with:", { name: leagueName, type: leagueType });
-            console.log("Server Response:", response.data);
+            // console.log("Creating league with:", { name: leagueName, type: leagueType });
+            // console.log("Server Response:", response.data);
     
             if (response.data) {
                 localStorage.setItem("currentLeagueId", response.data._id);

@@ -9,6 +9,7 @@ function Login() {
     const [errorMessage, setErrorMessage] = useState("");
     const navigate = useNavigate();
 
+    // Login Handler
     const handleLogin = async (e) => {
         e.preventDefault();
         if (!email || !password) {

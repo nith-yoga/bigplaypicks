@@ -7,14 +7,14 @@ const JoinLeague = () => {
     const navigate = useNavigate();
     const [leagues, setLeagues] = useState([]);
 
-    // Fetch leagues from the backend
+    // Fetch leagues from the server
     useEffect(() => {
         const fetchLeagues = async () => {
             try {
                 const response = await fetch("http://localhost:5000/api/league/leagues");
                 const data = await response.json();
                 setLeagues(data);
-                console.log("Fetched leagues:", data); // ✅ Debugging to check response
+                // console.log("Fetched leagues:", data);
             } catch (error) {
                 console.error("Error fetching leagues:", error);
             }
@@ -23,10 +23,10 @@ const JoinLeague = () => {
         fetchLeagues();
     }, []);
 
-    // Function to select a league and store the correct ObjectId
+    // Handle Select League
     const handleSelectLeague = async (league) => {
-        console.log("Selected league object:", league); 
-        console.log("Selected league ID:", league._id);
+        // console.log("Selected league object:", league); 
+        // console.log("Selected league ID:", league._id);
     
         // Get token and user info from localStorage
         const token = localStorage.getItem("token");
@@ -41,7 +41,7 @@ const JoinLeague = () => {
         try {
             const response = await axios.post(
                 "http://localhost:5000/api/league/join", 
-                { leagueId: league._id, userId: user.id },  // Assuming user object has `id` field
+                { leagueId: league._id, userId: user.id },
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -50,7 +50,7 @@ const JoinLeague = () => {
             );
     
             console.log("Joined league response:", response.data);
-            navigate("/create-team");  // Or another page based on your flow
+            navigate("/create-team");  // Navigate to Team Creation
         } catch (error) {
             console.error("Error joining league:", error.response?.data || error);
         }

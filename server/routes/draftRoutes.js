@@ -12,7 +12,7 @@ router.post('/:userId/:leagueId', async (req, res) => {
         // Fetch player data from external API
         const playerResponse = await fetch(`https://www.thesportsdb.com/api/v1/json/3/lookupplayer.php?id=${playerId}`);
         const playerData = await playerResponse.json();
-        console.log("API Response:", playerData);
+        // console.log("API Response:", playerData);
         const player = playerData.players ? playerData.players[0] : null;
 
         if (!player) {
@@ -20,7 +20,7 @@ router.post('/:userId/:leagueId', async (req, res) => {
         }
 
         // Find the user and add the player to their team
-        console.log("User ID from request:", userId);
+        // console.log("User ID from request:", userId);
         const team = await Team.findOne({ userId, leagueId });
         if (!team) {
             return res.status(404).json({ message: "Team not found" });

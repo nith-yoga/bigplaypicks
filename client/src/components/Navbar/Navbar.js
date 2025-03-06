@@ -7,11 +7,13 @@ function Navbar() {
     const [user, setUser] = useState(null);
     const navigate = useNavigate();
 
+    // Check if user is logged in
     useEffect(() => {
         checkLoginStatus();
     }, []);
 
     const checkLoginStatus = () => {
+        // Check user token for login session
         const token = localStorage.getItem("token");
         const user = JSON.parse(localStorage.getItem("user"));
 
@@ -24,6 +26,7 @@ function Navbar() {
         }
     };
 
+    // handle logout functionality
     const handleLogout = () => {
         localStorage.removeItem("token");
         localStorage.removeItem("user");

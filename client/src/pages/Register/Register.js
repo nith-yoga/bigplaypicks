@@ -11,6 +11,7 @@ function Register() {
 
     const navigate = useNavigate();
 
+    // Handle User Registration
     const handleSubmit = async (e) => {
         e.preventDefault();
         setErrorMessage("");
@@ -27,7 +28,7 @@ function Register() {
 
             if (response.data.user) {
                 localStorage.setItem("user", JSON.stringify(response.data.user));
-                navigate("/dashboard");
+                navigate("/login"); //Navigate to login page (User needs to login to store active session)
             } else {
                 setErrorMessage(response.data.message || "Registration failed.");
             }

@@ -15,12 +15,12 @@ const DraftBoard = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // Fetch players from TheSportsDB or fallback API
+        // Fetch players from TheSportsDB API
         const handleFetchPlayers = async () => {
             try {
                 const response = await fetch(`https://www.thesportsdb.com/api/v1/json/3/searchplayers.php?p=Jalen Hurts`);
                 const data = await response.json();
-                console.log("Fetched Players:", data.player);
+                // console.log("Fetched Players:", data.player);
 
                 // Check if players are returned
                 if (data.player && data.player.length > 0) {

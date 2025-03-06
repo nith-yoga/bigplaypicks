@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(cors({ origin: "http://localhost:3000", credentials: true}));
 
 app.use((req, res, next) => {
-    console.log(`Incoming request: ${req.method} ${req.originalUrl}`);
+    // console.log(`Incoming request: ${req.method} ${req.originalUrl}`);
     next();
 });
 
@@ -38,9 +38,9 @@ app.get("/", (req, res) => {
 })
 
 // Test Route
-app.get("/api/test", (req, res) => {
-    res.send("Test route working!");
-});
+// app.get("/api/test", (req, res) => {
+//     res.send("Test route working!");
+// });
 
 //404 Handling
 app.use((req, res) => {

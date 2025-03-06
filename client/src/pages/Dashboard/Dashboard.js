@@ -7,10 +7,11 @@ function Dashboard() {
     const currentLeagueId = localStorage.getItem("currentLeagueId");
 
     useEffect(() => {
-        console.log("Fetching team for user:", userId, currentLeagueId);
+        // console.log("Fetching team for user:", userId, currentLeagueId);
         const url = `http://localhost:5000/api/team/${userId}/${currentLeagueId}`;
-        console.log("Request URL:", url);
+        // console.log("Request URL:", url);
     
+        // Display Team Information
         if (userId && currentLeagueId) {
             fetch(url)
                 .then((response) => response.json())
@@ -29,6 +30,7 @@ function Dashboard() {
         <div className="team-container">
             {team ? (
                 <>
+                    {/* Team Dashboard */}
                     <div className="team-dashboard">
                         <h1>{team.name}</h1>
                         <p>Record: {team.record}</p>
@@ -36,6 +38,7 @@ function Dashboard() {
                         <p>Current Matchup: {team.currentMatchup}</p>
                     </div>
     
+                    {/* Team Roster */}
                     <div className="roster">
                         <h2>Your Roster</h2>
                         <table>

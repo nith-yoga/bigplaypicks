@@ -8,11 +8,11 @@ const router = express.Router();
 // Create Team
 router.post("/create", async (req, res) => {
     try {
-        console.log("Incoming Team Creation Request:", req.body); // Debugging
+        // console.log("Incoming Team Creation Request:", req.body);
         
         const { name, userId, leagueId } = req.body;
-        console.log("Received userId:", userId);
-        console.log("Received leagueId:", leagueId);
+        // console.log("Received userId:", userId);
+        // console.log("Received leagueId:", leagueId);
 
         if (!name || !userId || !leagueId) {
             return res.status(400).json({ message: "All fields are required" });

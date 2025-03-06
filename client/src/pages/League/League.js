@@ -12,6 +12,7 @@ function League() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        // Fetch League connected to UserId
         const fetchLeagueData = async () => {
             setLoading(true);
 

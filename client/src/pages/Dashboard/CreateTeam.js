@@ -8,14 +8,14 @@ const CreateTeam = () => {
 
     const navigate = useNavigate();
 
-    const user = JSON.parse(localStorage.getItem("user") || "{}");
-    console.log(user);
-    const userId = user ? user.id : null;
-    console.log("Extracted userId:", userId);
+    /* const user = JSON.parse(localStorage.getItem("user") || "{}");
+       console.log(user); */
+    /* const userId = user ? user.id : null;
+       console.log("Extracted userId:", userId); */
 
     useEffect(() => {
         const storedLeagueId = localStorage.getItem("currentLeagueId");
-        console.log("Extracted leagueId:", storedLeagueId);
+        // console.log("Extracted leagueId:", storedLeagueId);
         if (storedLeagueId) {
             setCurrentLeagueId(storedLeagueId);
         } else {
@@ -23,13 +23,13 @@ const CreateTeam = () => {
         }
     }, [navigate]);
 
+    // Handling Team Creation
     const handleCreateTeam = async (e) => {
         e.preventDefault();
         setError(null);
     
-        // Debugging: Check what's actually in localStorage
         const userString = localStorage.getItem("user");
-        console.log("Raw user data from localStorage:", userString);
+        // console.log("User data from localStorage:", userString);
     
         let user = {};
         try {
@@ -50,21 +50,22 @@ const CreateTeam = () => {
         }
         console.log("Current leagueId:", currentLeagueId);
     
+        // Posting Created Team
         try {
             const response = await fetch("http://localhost:5000/api/team/create", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     name: teamName,
-                    userId: userId,   // Send userId as the string
-                    leagueId: currentLeagueId  // Ensure currentLeagueId is valid
+                    userId: userId, 
+                    leagueId: currentLeagueId 
                 })
             });
     
             const data = await response.json();
     
             if (response.ok) {
-                console.log("Team created:", data.team);
+                // console.log("Team created:", data.team);
                 await new Promise((resolve) => setTimeout(resolve, 1000));
                 localStorage.setItem("userId", userId);
                 localStorage.setItem("teamId", data.team._id);

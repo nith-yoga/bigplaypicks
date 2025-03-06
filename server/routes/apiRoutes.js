@@ -4,6 +4,7 @@ require("dotenv").config();
 
 const router = express.Router();
 
+// TheSportsDB API URL
 const API_BASE_URL = 'https://www.thesportsdb.com/api/v1/json/3';
 
 // GET Players
@@ -11,10 +12,10 @@ router.get('/players/:name', async (req, res) => {
     try {
         const playerName = req.params.name.replace(/\s/g, '_');
         const apiUrl = `${API_BASE_URL}/searchplayers.php?p=${playerName}`;
-        console.log(`Making API request to: ${apiUrl}`);
+        // console.log(`Making API request to: ${apiUrl}`);
 
         const response = await axios.get(apiUrl);
-        console.log(response.data);
+        // console.log(response.data);
         res.json(response.data);
     } catch (error) {
         console.error("Error fetching player data:", error.message);
