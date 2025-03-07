@@ -31,10 +31,10 @@ cd client &&& npm install
 ../  
 cd server && npm install  
 ```
-3. Replace API URLs in the frontend with [http://localhost:5000/api] for the backend and [http://localhost:3000] for the frontend (there were issues trying to connect via env in the frontend, but the file is there for further debugging)  
+3. Replace API URLs in the frontend with http://localhost:5000/api for the backend and http://localhost:3000 for the frontend (there were issues trying to connect via env in the frontend, but the file is there for further debugging)  
 4. Start the backend (```cd server && npm start```)  
 5. Start the frontend (```cd client && npm start```)  
-6. Open [http://localhost:3000] in your browser
+6. Open http://localhost:3000 in your browser
 
 ## Future Improvements  
   Enhanced User Management  
