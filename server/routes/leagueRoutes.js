@@ -37,9 +37,9 @@ router.get("/:id", async (req, res) => {
 });
 
 router.post("/create", verifyToken, async (req, res) => {
-    console.log("Create League route hit");
+    // console.log("Create League route hit");
 
-    console.log("Request User:", req.user); // ✅ Check if req.user exists
+    // console.log("Request User:", req.user);
 
     if (!req.user || !req.user.userId) {
         return res.status(400).json({ message: "User authentication failed. No user ID found." });

@@ -6,7 +6,7 @@ const cors = require("cors");
 const app = express();
 app.use(express.json());
 app.use(cors({ 
-    origin: "https://bigplaypicks-20dk4k064-nith-yogas-projects.vercel.app", 
+    origin: "https://bigplaypicks.vercel.app", 
     methods: "GET,POST,PUT,DELETE",
     allowedHeaders: "Content-Type,Authorization",
     credentials: true
