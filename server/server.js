@@ -8,7 +8,9 @@ app.use(express.json());
 app.use(cors({ 
     origin: "https://bigplaypicks-20dk4k064-nith-yogas-projects.vercel.app", 
     methods: "GET,POST,PUT,DELETE",
-    allowedHeaders: "Content-Type,Authorization"}));
+    allowedHeaders: "Content-Type,Authorization",
+    credentials: true
+}));
 
 app.use((req, res, next) => {
     // console.log(`Incoming request: ${req.method} ${req.originalUrl}`);
