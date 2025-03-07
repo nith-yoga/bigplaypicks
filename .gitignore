@@ -1,0 +1,20 @@
+#Node Dependencies
+node_modules/
+
+#dotenv
+.env
+
+#Logs
+*.log 
+
+#Build output
+/dist
+/build 
+
+#System Files
+.DS_Store
+Thumbs.db
+
+#IDE config
+.vscode/
+.idea
