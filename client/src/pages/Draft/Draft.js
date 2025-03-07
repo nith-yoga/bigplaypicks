@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Draft.css";
 import { useNavigate } from "react-router-dom";
 
-const Draft = () => {
+function Draft() {
     const [availablePlayers, setAvailablePlayers] = useState([]);
     const [selectedPlayer, setSelectedPlayer] = useState(null);
     const [error, setError] = useState(null);

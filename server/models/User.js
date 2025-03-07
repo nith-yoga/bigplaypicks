@@ -19,7 +19,12 @@ const UserSchema = new mongoose.Schema({
     leagues: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "League"
-    }]
+    }],
+    role: {
+        type: String,
+        enum: ["user", "admin"],
+        default: "user"
+    }
 });
 
 UserSchema.pre("save", async function (next) {
