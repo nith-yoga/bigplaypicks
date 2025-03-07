@@ -8,7 +8,7 @@ function Dashboard() {
 
     useEffect(() => {
         // console.log("Fetching team for user:", userId, currentLeagueId);
-        const url = `http://localhost:5000/api/team/${userId}/${currentLeagueId}`;
+        const url = `https://bigplaypicks-production.up.railway.app/api/team/${userId}/${currentLeagueId}`;
         // console.log("Request URL:", url);
     
         // Display Team Information

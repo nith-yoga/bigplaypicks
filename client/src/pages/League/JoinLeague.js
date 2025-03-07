@@ -11,7 +11,7 @@ const JoinLeague = () => {
     useEffect(() => {
         const fetchLeagues = async () => {
             try {
-                const response = await fetch("http://localhost:5000/api/league/leagues");
+                const response = await fetch("https://bigplaypicks-production.up.railway.app/api/league/leagues");
                 const data = await response.json();
                 setLeagues(data);
                 // console.log("Fetched leagues:", data);

@@ -20,7 +20,7 @@ function League() {
                 if (selectedLeague) {
                     setLeagueData(selectedLeague);
                 } else {
-                    const response = await axios.get(`http://localhost:5000/api/league/${id}`)
+                    const response = await axios.get(`https://bigplaypicks-production.up.railway.app/api/league/${id}`)
                     setLeagueData(response.data);
                 }
             } catch (error) {

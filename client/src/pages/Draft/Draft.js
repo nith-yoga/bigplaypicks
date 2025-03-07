@@ -44,7 +44,7 @@ const Draft = () => {
     // Handle drafting a player
     const handleDraftPlayer = async (playerId) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/draft/${userId}/${leagueId}`, {
+            const response = await fetch(`https://bigplaypicks-production.up.railway.app/api/draft/${userId}/${leagueId}`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ userId: userId }),

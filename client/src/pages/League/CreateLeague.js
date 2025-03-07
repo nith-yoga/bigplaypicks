@@ -25,7 +25,7 @@ function CreateLeague() {
     
         try {
             const response = await axios.post(
-                "http://localhost:5000/api/league/create",
+                "https://bigplaypicks-production.up.railway.app/api/league/create",
                 { name: leagueName, type: leagueType },
                 { headers: { Authorization: `Bearer ${token}` } }
             );
