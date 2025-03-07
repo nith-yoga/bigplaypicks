@@ -5,7 +5,10 @@ const cors = require("cors");
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:3000", credentials: true}));
+app.use(cors({ 
+    origin: "https://bigplaypicks-20dk4k064-nith-yogas-projects.vercel.app", 
+    methods: "GET,POST,PUT,DELETE",
+    allowedHeaders: "Content-Type,Authorization"}));
 
 app.use((req, res, next) => {
     // console.log(`Incoming request: ${req.method} ${req.originalUrl}`);
